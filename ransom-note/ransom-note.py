@@ -1,7 +1,16 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         
+        
+        #Brute Force
+        
+        #if len(set(ransomNote)) > len(set(magazine)) : return False
+        #as it would mean a character required is not present in magazine
+        
+        
+        
         #return true if ransomNote can be constructed from magazine and false otherwise
+        #O(N) Time and O(N) Space
         
         d1 = {} #will store elements and frequencies of ransomNote
         d2 = {} #will store elements and frequencies of magazine
@@ -32,3 +41,8 @@ class Solution:
             
         if count == len(d1):
             return True
+        
+        
+        
+        
+        
