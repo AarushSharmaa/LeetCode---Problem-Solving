@@ -7,6 +7,12 @@ class Solution:
     def mergeTwoLists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         
         #Approach 1 
+        #Complexity Analysis : O(M + N) Time and O(M + N) Space
+        
+        #Create a separate LinkedList and using two pointers p1 and p2 which points to heads of L1 and L2 initially,
+        #keep comparing values of L1 and L2 
+        #and keep adding them in our separate LinkedList. The termination condition would be when p1 or p2 points to Null
+        #Once this happens, we can directly add the remaining linkedlist to our output linkedlist
         
         
         
