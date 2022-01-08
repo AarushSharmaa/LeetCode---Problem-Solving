@@ -13,8 +13,6 @@ class Solution:
         rows = []
         columns = []
         
-        temp = matrix.copy()
-        
         hashtable = {}
         
         for r in range(0, m): #this will hold the row
