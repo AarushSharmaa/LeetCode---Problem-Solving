@@ -9,7 +9,7 @@ class Solution:
         
         #Iterative Approach : O(H) Time and O(1) Space
         
-        """
+        
         node = root
         
         while node:
@@ -24,10 +24,11 @@ class Solution:
                 node = node.left
                 
         return None
-        """
+        
         
         #Recursive Approach : O(H) Time and O(H) space due to internal call stack
         
+        """
         if root == None:
             return
         
@@ -41,7 +42,7 @@ class Solution:
             return self.searchBST(root.left, val)
         
         return None
-        
+        """
         
         
         
