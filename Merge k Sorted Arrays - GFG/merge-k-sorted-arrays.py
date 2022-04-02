@@ -5,12 +5,21 @@ class Solution:
     def mergeKArrays(self, arr, K):
         # code here
         # return merged list
-        array = []
-        for i in arr:
-            for j in i:
-                array.append(j)
-        array.sort()
-        return array
+        import heapq 
+        heap = []
+        for i in range(0, len(arr)):
+            heapq.heappush(heap, (arr[i][0], i, 0))
+        
+        count = 0
+        final = []
+        while count < K * K:
+            magnitude, i, j = heapq.heappop(heap)
+            final.append(magnitude)
+            if (j + 1) < len(arr):
+                heapq.heappush(heap, (arr[i][j+1], i, j + 1))
+            count += 1 
+        return final
+        
 
 #{ 
 #  Driver Code Starts
